@@ -1,0 +1,26 @@
+logging:
+  level:
+    by.tms.davydovskaya.todo: DEBUG
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3310/lesson
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  flyway:
+    url: jdbc:mysql://localhost:3310
+    user: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    schemas: lesson
+    locations: scripts
+
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 1MB
